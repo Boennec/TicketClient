@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ticket.name}}ticket-client
+{% endblock %}
+{% block content %}
+<div class="row">
+
+	<div class="col-md-7">
+		<h3>{{ ticket.name }}</h3>
+		<p>{{ ticket.content }}</p>
+		<p>{{ ticket.category }}</p>
+
+	</div>

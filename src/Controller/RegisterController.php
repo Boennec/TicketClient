@@ -44,13 +44,17 @@ class RegisterController extends AbstractController
 
             $user->setPassword($password);
 
+            return $this->redirectToRoute('account');
 
             $this->entityManager->persist($user); //on fige la data
             $this->entityManager->flush(); //on execute laa persistance dans la bdd
+
         }
 
         return $this->render('register/index.html.twig', [
             'form' => $form->createView()    //on demande d'envoyer 'form' a la vue html.twig
         ]);
+
     }
+
 }

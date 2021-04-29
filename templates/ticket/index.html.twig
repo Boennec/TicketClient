@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les tickets
+{% endblock %}
+
+{% block content %}
+
+<h1>Les Tickets</h1>
+
+<div class="row">
+	{% for ticket in tickets %}
+		<div class="col-md-4">
+			<div class="product-item">
+				<h5>{{ ticket.name }}</h5>
+
+				<hr>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+
+  <a href="{{ path('ticket', {'id':ticket.id})  }}"><h5>{{ ticket.name }}</h5></a> 
+
+
+{% endblock %}
